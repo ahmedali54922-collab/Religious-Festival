@@ -384,7 +384,7 @@
             line-height: 1.8;
         }
 
-        /* ================= CONTACT US ================= */
+
         #contact {
             background: linear-gradient(135deg, #fff3e0 30%, #ffe0b2 100%);
         }
@@ -397,7 +397,8 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        .paragraph{
+
+        .paragraph {
             text-align: center;
         }
 
@@ -439,7 +440,6 @@
             background: #e68a00;
         }
 
-        /* ================= FOOTER ================= */
         .main-footer {
             background-color: #222;
             color: #fff;
@@ -505,23 +505,132 @@
             opacity: 0.6;
         }
 
-        /* ================= RESPONSIVE ================= */
-        @media (max-width: 900px) {
-            .slide {
-                flex-direction: column;
-                height: auto;
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background: #fff;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 850px) {
+            header {
+                padding: 15px 20px;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+
+            .menu-toggle {
+                display: flex !important;
+            }
+
+            @media (max-width: 850px) {
+
+                .nav {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center;
+                    justify-content: flex-start;
+                    position: fixed;
+                    top: 60px;
+                    right: -100%;
+                    width: 100%;
+                    height: 100vh;
+                    background-color: orange;
+                    transition: 0.4s ease;
+                    z-index: 999;
+                }
+
+                .nav.active {
+                    right: 0;
+                }
+
+                .nav a {
+                    display: block;
+                    width: 100%;
+                    padding: 20px 0;
+                    margin: 0 !important;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                    text-align: center;
+                }
+
+            }
+
+            .hero-box h1 {
+                font-size: 28px;
+            }
+
+            .hero-box p {
+                font-size: 16px;
             }
 
             .festival-slider {
                 height: auto;
+                min-height: 600px;
+            }
+
+            .slide {
+                flex-direction: column;
+                position: relative;
+                opacity: 1;
+                visibility: visible;
+                display: none;
+            }
+
+            #isl-f1:checked~.festival-slider .isl-s1,
+            #isl-f2:checked~.festival-slider .isl-s2,
+            #hin-f1:checked~.festival-slider .hin-s1,
+            #hin-f2:checked~.festival-slider .hin-s2,
+            #chr-f1:checked~.festival-slider .chr-s1,
+            #chr-f2:checked~.festival-slider .chr-s2 {
+                display: flex;
             }
 
             .slide-card,
             .slide-info {
                 width: 100%;
+                padding: 20px;
             }
 
-            .slide-card {
-                height: 350px;
+            .slide-card img {
+                height: 280px;
+            }
+
+            .slide-info {
+                text-align: center;
+            }
+
+            .download-btn {
+                margin: 0 auto;
+            }
+
+            .book-card {
+                width: 45%;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
+
+        @media (max-width: 500px) {
+            .tab-card {
+                width: 100%;
+            }
+
+            .book-card {
+                width: 100%;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        } 

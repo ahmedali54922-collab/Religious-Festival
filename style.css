@@ -1,0 +1,527 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        header {
+            display: flex;
+            position: relative;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: orange;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav a {
+            color: #fff;
+            margin: 0 12px;
+            text-decoration: none;
+            font-size: large;
+        }
+
+        .Hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/hero.png.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-position: center;
+        }
+
+        .hero-box {
+            background: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            border-radius: 25px;
+            padding: 40px;
+            max-width: 900px;
+        }
+
+        .hero-box h1 {
+            font-size: 40px;
+            color: orange;
+            margin-bottom: 10px;
+        }
+
+        .hero-box p {
+            font-size: 20px;
+        }
+
+        /* ================= SECTIONS COMMON ================= */
+        section {
+            padding: 80px 20px;
+        }
+
+        #home {
+            padding: 0;
+        }
+
+        /* ================= RELIGION SYSTEM (Tabs + Sliders) ================= */
+        .religion-system {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #fffdf2 30%, #ffe6cc 100%);
+        }
+
+        .religion-system input[type="radio"] {
+            display: none;
+        }
+
+        .religion-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .tab-card {
+            width: 200px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+        }
+
+        .tab-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        .tab-card span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .tab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        #rel-islam:checked~.religion-tabs .isl-tab,
+        #rel-hindu:checked~.religion-tabs .hin-tab,
+        #rel-chris:checked~.religion-tabs .chr-tab {
+            border-color: orange;
+            background: #fff8f0;
+        }
+
+        .religion-content {
+            background: #fff;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            min-height: 550px;
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .panel {
+            display: none;
+            height: 100%;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #rel-islam:checked~.religion-content .islam-panel,
+        #rel-hindu:checked~.religion-content .hindu-panel,
+        #rel-chris:checked~.religion-content .chris-panel {
+            display: block;
+        }
+
+        .festival-slider {
+            position: relative;
+            height: 550px;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        #isl-f1:checked~.festival-slider .isl-s1,
+        #isl-f2:checked~.festival-slider .isl-s2,
+        #hin-f1:checked~.festival-slider .hin-s1,
+        #hin-f2:checked~.festival-slider .hin-s2,
+        #chr-f1:checked~.festival-slider .chr-s1,
+        #chr-f2:checked~.festival-slider .chr-s2 {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .slide-card {
+            width: 45%;
+            position: relative;
+            background: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .slide-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .slide-info {
+            width: 55%;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slide-info h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .slide-info p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: orange;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+            width: fit-content;
+        }
+
+        .slide-nav {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .slide-nav label {
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+        }
+
+        /* ================= TYPOGRAPHY ================= */
+        section h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: orange;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* ================= BOOKS SECTION ================= */
+        #books {
+            background: linear-gradient(135deg, #fff0f5 30%, #e6e6fa 100%);
+        }
+
+        .books-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .book-card {
+            width: 240px;
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+        }
+
+        .book-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .book-info h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            display: block;
+            font-weight: bold;
+            color: orange;
+            margin-bottom: 10px;
+        }
+
+        .add-cart-btn {
+            padding: 8px 15px;
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* ================= GALLERY SECTION ================= */
+        #gallery {
+            background: linear-gradient(135deg, #e8f5e9 30%, #c8e6c9 100%);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* ================= ABOUT US ================= */
+        #aboutus {
+            background: linear-gradient(135deg, #f0f4ff 30%, #d9e2ff 100%);
+            text-align: center;
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-container p {
+            font-size: 19px;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        /* ================= CONTACT US ================= */
+        #contact {
+            background: linear-gradient(135deg, #fff3e0 30%, #ffe0b2 100%);
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .paragraph{
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: orange;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #e68a00;
+        }
+
+        /* ================= FOOTER ================= */
+        .main-footer {
+            background-color: #222;
+            color: #fff;
+            padding: 60px 0 0;
+            margin-top: 0;
+            width: 100%;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: left;
+            padding: 0 30px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            color: orange;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .footer-links h3,
+        .footer-contact h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: orange;
+            text-transform: uppercase;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: orange;
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding: 20px 30px 0;
+            border-top: 1px solid #444;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 900px) {
+            .slide {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .festival-slider {
+                height: auto;
+            }
+
+            .slide-card,
+            .slide-info {
+                width: 100%;
+            }
+
+            .slide-card {
+                height: 350px;
+            }
+        }

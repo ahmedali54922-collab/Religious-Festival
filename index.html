@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bg-animated"></div>
+  <header>
+    <div class="logo">Religious Festivals</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#aboutus">About Us</a>
+      <a href="#religion">Religion</a>
+      <a href="#books">Books</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+  <section id="home">
+    <section class="Hero">
+      <div class="hero-box">
+        <h1>Festivals of Faith, Culture & Tradition</h1>
+        <p>Explore religious and cultural festivals from around the world. Learn their meanings,
+          traditions, and historical significance in one place.</p>
+      </div>
+    </section>
+  </section>
+
+  <section id="aboutus">
+    <div class="about-container">
+      <h2>About Our Project</h2>
+      <p>
+        Welcome to <strong>Religious Festivals</strong>, a platform dedicated to exploring the rich cultural and
+        spiritual diversity of our world.
+        Our mission is to celebrate the unique traditions, histories, and meanings behind festivals from various faiths.
+        Whether it's the lights of Diwali, the communal joy of Eid, or the hope of Christmas, we aim to bring people
+        closer
+        by sharing the stories that define our global heritage.
+      </p>
+    </div>
+  </section>
+  <section id="religion" class="religion-system">
+    <h2>Festivals Based on Religion</h2>
+    <!-- Main Level: Religion Selection Radios -->
+    <input type="radio" name="main-rel" id="rel-islam" checked>
+    <input type="radio" name="main-rel" id="rel-hindu">
+    <input type="radio" name="main-rel" id="rel-chris">
+
+    <!-- Navigation Cards (Level 1 Tabs) -->
+    <div class="religion-tabs">
+      <label for="rel-islam" class="tab-card isl-tab">
+        <img src="assets/islam.png" alt="Islam">
+        <span>Islam</span>
+      </label>
+      <label for="rel-hindu" class="tab-card hin-tab">
+        <img src="assets/hindu.png" alt="Hinduism">
+        <span>Hinduism</span>
+      </label>
+      <label for="rel-chris" class="tab-card chr-tab">
+        <img src="assets/cris.png" alt="Christianity">
+        <span>Christianity</span>
+      </label>
+    </div>
+
+    <!-- Content Area -->
+    <div class="religion-content">
+
+      <!-- ================= ISLAM PANEL ================= -->
+      <div class="panel islam-panel">
+        <input type="radio" name="isl-f" id="isl-f1" checked>
+        <input type="radio" name="isl-f" id="isl-f2">
+
+        <div class="festival-slider">
+          <div class="slide isl-s1">
+            <div class="slide-card">
+              <img src="/assets/islam2.png" alt="Eid-ul-Fitr">
+              <div class="slide-nav">
+                <label for="isl-f2" class="prev">❮</label>
+                <label for="isl-f2" class="next">❯</label>
+              </div>
+            </div>
+            <div class="slide-info">
+              <h2>Eid-ul-Fitr</h2>
+              <p>Eid-ul-Fitr marks the end of Ramadan, the holy month of fasting. It is a day of joy, thanksgiving, and
+                community, celebrating the spiritual strength gained through devotion.</p>
+              <a href="assets/eid_ul_fitr.doc" download class="download-btn">Download History</a>
+            </div>
+          </div>
+          <div class="slide isl-s2">
+            <div class="slide-card">
+              <img src="/assets/islam1.png" alt="Eid-ul-Adha">
+              <div class="slide-nav">
+                <label for="isl-f1" class="prev">❮</label>
+                <label for="isl-f1" class="next">❯</label>
+              </div>
+            </div>
+            <div class="slide-info">
+              <h2>Eid-ul-Adha</h2>
+              <p>Eid-ul-Adha commemorates the sacrifice of Prophet Ibrahim and emphasizes selfless devotion and charity
+                by sharing meals with the needy.</p>
+              <a href="assets/eid_ul_adha.doc" download class="download-btn">Download History</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= HINDU PANEL ================= -->
+      <div class="panel hindu-panel">
+        <input type="radio" name="hin-f" id="hin-f1" checked>
+        <input type="radio" name="hin-f" id="hin-f2">
+
+        <div class="festival-slider">
+          <div class="slide hin-s1">
+            <div class="slide-card">
+              <img src="/assets/hindu4.png" alt="Diwali">
+              <div class="slide-nav">
+                <label for="hin-f2" class="prev">❮</label>
+                <label for="hin-f2" class="next">❯</label>
+              </div>
+            </div>
+            <div class="slide-info">
+              <h2>Diwali</h2>
+              <p>Diwali, the Festival of Lights, celebrates the victory of light over darkness and good over evil,
+                marking the return of Lord Rama to Ayodhya.</p>
+              <a href="assets/diwali.doc" download class="download-btn">Download History</a>
+            </div>
+          </div>
+          <div class="slide hin-s2">
+            <div class="slide-card">
+              <img src="/assets/hindu1.png" alt="Holi">
+              <div class="slide-nav">
+                <label for="hin-f1" class="prev">❮</label>
+                <label for="hin-f1" class="next">❯</label>
+              </div>
+            </div>
+            <div class="slide-info">
+              <h2>Holi</h2>
+              <p>Holi, the Festival of Colors, marks the arrival of spring and the triumph of good over evil with
+                vibrant celebrations and communal harmony.</p>
+              <a href="assets/holi.doc" download class="download-btn">Download History</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= CHRISTIAN PANEL ================= -->
+      <div class="panel chris-panel">
+        <input type="radio" name="chr-f" id="chr-f1" checked>
+        <input type="radio" name="chr-f" id="chr-f2">
+
+        <div class="festival-slider">
+          <div class="slide chr-s1">
+            <div class="slide-card">
+              <img src="assets/chris1.png" alt="Christmas">
+              <div class="slide-nav">
+                <label for="chr-f2" class="prev">❮</label>
+                <label for="chr-f2" class="next">❯</label>
+              </div>
+            </div>
+            <div class="slide-info">
+              <h2>Christmas</h2>
+              <p>Christmas celebrates the birth of Jesus Christ, bringing a message of peace, love, and goodwill to all
+                through gift-giving and festive gatherings.</p>
+              <a href="assets/christmas.doc" download class="download-btn">Download History</a>
+            </div>
+          </div>
+          <div class="slide chr-s2">
+            <div class="slide-card">
+              <img src="assets/chris2.png" alt="Easter">
+              <div class="slide-nav">
+                <label for="chr-f1" class="prev">❮</label>
+                <label for="chr-f1" class="next">❯</label>
+              </div>
+            </div>
+            <div class="slide-info">
+              <h2>Easter</h2>
+              <p>Easter marks the resurrection of Jesus Christ, representing hope, redemption, and the victory of life
+                over death in the Christian faith.</p>
+              <a href="assets/easter.doc" download class="download-btn">Download History</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section id="books">
+    <section class="books-section">
+      <h2>Festival History Books</h2>
+
+      <div class="books-container">
+
+        <div class="book-card">
+          <div class="book-image">
+            <img loading="lazy" src="assets/chrisbook.png" alt="Christian History Book">
+          </div>
+          <div class="book-info">
+            <h3>A History of Christianity</h3>
+            <p>Detailed historical overview of Christianity and its traditions.
+              "A History of Christianity: 2,000 Years of Faith" (often published by DK) is written by Michael Collins
+              and Matthew A. Price
+            </p>
+            <div class="book-price-action">
+              <span class="price">$19.99</span>
+              <button class="add-cart-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-image">
+            <img loading="lazy" src="assets/hinbook.png" alt="Hindu History Book">
+          </div>
+          <div class="book-info">
+            <h3>A History of Hinduism</h3>
+            <p>Explore the roots, philosophy, and traditions of Hinduism.
+              The author of A History of Hinduism: An Inside-the-Tradition View is Maj. Gen. G D Bakshi. Published by
+              Garuda Prakashan,
+            </p>
+            <div class="book-price-action">
+              <span class="price">$24.99</span>
+              <button class="add-cart-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-image">
+            <img loading="lazy" src="assets/islbook.png" alt="Islamic History Book">
+          </div>
+          <div class="book-info">
+            <h3>Lost Islamic History</h3>
+            <p>An insight into Muslim civilization and historical achievements.
+              Lost Islamic History: Reclaiming Muslim Civilisation from the Past is authored by Firas Alkhateeb. First
+              published in 2014 by Hurst Publishers
+            </p>
+            <div class="book-price-action">
+              <span class="price">$22.50</span>
+              <button class="add-cart-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section id="gallery">
+    <section class="gallery-section">
+      <h2>Islamic Festivals Gallery</h2>
+      <div class="gallery-grid">
+        <img loading="lazy" src="assets/islam1.png" alt="Islam Festival">
+        <img loading="lazy" src="assets/islam2.png" alt="Islam Festival">
+        <img loading="lazy" src="assets/islam3.png" alt="Islam Festival">
+        <img loading="lazy" src="assets/islam4.png" alt="Islam Festival">
+      </div>
+      <h2>Hindu Festivals Gallery</h2>
+      <div class="gallery-grid">
+        <img loading="lazy" src="assets/hindu1.png" alt="Hindu Festival">
+        <img loading="lazy" src="assets/hindu2.png" alt="Hindu Festival">
+        <img loading="lazy" src="assets/hindu3.png" alt="Hindu Festival">
+        <img loading="lazy" src="assets/hindu4.png" alt="Hindu Festival">
+      </div>
+      <h2>Christian Festivals Gallery</h2>
+      <div class="gallery-grid">
+        <img loading="lazy" src="assets/chris1.png" alt="Christian Festival">
+        <img loading="lazy" src="assets/chris2.png" alt="Christian Festival">
+        <img loading="lazy" src="assets/chris3.png" alt="Christian Festival">
+        <img loading="lazy" src="assets/chris4.png" alt="Christian Festival">
+      </div>
+    </section>
+  </section>
+
+  <section id="contact">
+    <div class="contact-section">
+      <div class="section-header">
+        <h2>Contact Us & Feedback</h2>
+        <p class="paragraph">We value your thoughts and suggestions. Please reach out to us!</p>
+      </div>
+      <div class="contact-container">
+        <form class="feedback-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="feedback">Your Feedback</label>
+            <textarea id="feedback" name="feedback" rows="5" placeholder="Tell us what you think..."
+              required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2 class="footer-logo">Religious Festivals</h2>
+        <p>Celebrating the Diverse Traditions of the World</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#aboutus">About Us</a>
+        <a href="#religion">Religion</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#books">Books</a>
+      </div>
+      <div class="footer-contact">
+        <h3>Connected With Us</h3>
+        <p>Email: info@festivals.com</p>
+        <p>Phone: +1 234 567 890</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Religious Festivals. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function addToCart() {
+      alert('Item added to cart!');
+    }
+  </script>
+</body>
+
+</html>
